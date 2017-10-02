@@ -1,1 +1,3 @@
 
+We all are working with NSDictionary. Most of the time for the REST API call, the response is coming like JSON or XML. If we use the AFNetworking or SWRequest or other frameworks, API Responses are NSDictionary. If the response has any NSNull values, then NSDictionary also having that NSNull values. In this situation if the user use that Dictionary some scenario app will crash. 
+So we can replace the NSNull values to some other values or empty string. Here this is the small trick to replace the NSNull values from NSDictionary.
