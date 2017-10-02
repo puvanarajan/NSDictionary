@@ -26,6 +26,7 @@
 
 #import "NSDictionary+DictCategory.h"
 
+#define REPLACE_STRING @""
 @implementation NSDictionary (DictCategory)
 
 - (NSDictionary *)dictionaryRemovingNSNullValues {
@@ -38,7 +39,7 @@
     NSMutableDictionary *replaced = [NSMutableDictionary dictionaryWithDictionary: self];
     
     const id nul = [NSNull null];
-    const NSString *blank = @"";
+    const NSString *blank = REPLACE_STRING;
     
     for (NSString *key in [self allKeys]) {
         
@@ -57,7 +58,7 @@
 - (NSArray *)replaceNullArray:(NSArray *)array {
     
     const id nul = [NSNull null];
-    const NSString *blank = @"";
+    const NSString *blank = REPLACE_STRING;
     
     NSMutableArray *replaced = [NSMutableArray arrayWithArray:array];
     
@@ -77,7 +78,7 @@
 - (NSDictionary *)replaceNull:(NSDictionary *)dict {
     
     const id nul = [NSNull null];
-    const NSString *blank = @"";
+    const NSString *blank = REPLACE_STRING;
     
     NSMutableDictionary *replaced = [NSMutableDictionary dictionaryWithDictionary: dict];
     
